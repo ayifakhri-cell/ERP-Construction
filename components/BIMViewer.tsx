@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { MOCK_BIM_DATA } from '../constants';
+import { MOCK_BIM_DATA } from '../constants.ts';
 import { Search, Database, ChevronRight } from 'lucide-react';
-import { generateAnalysisQuery } from '../services/geminiService';
+import { generateAnalysisQuery } from '../services/geminiService.ts';
 
 const BIMViewer: React.FC = () => {
   const [query, setQuery] = useState('');

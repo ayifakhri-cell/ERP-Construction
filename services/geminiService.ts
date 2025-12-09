@@ -1,6 +1,6 @@
 import { GoogleGenAI, Type, FunctionDeclaration, Schema } from "@google/genai";
-import { MODEL_FAST, SYSTEM_INSTRUCTION_ACCOUNTING, SYSTEM_INSTRUCTION_PROCUREMENT, SYSTEM_INSTRUCTION_SAFETY, SAFETY_HANDBOOK_CONTENT } from "../constants";
-import { ExtractedInvoice } from "../types";
+import { MODEL_FAST, SYSTEM_INSTRUCTION_ACCOUNTING, SYSTEM_INSTRUCTION_PROCUREMENT, SYSTEM_INSTRUCTION_SAFETY, SAFETY_HANDBOOK_CONTENT } from "../constants.ts";
+import { ExtractedInvoice } from "../types.ts";
 
 // Initialize Gemini Client
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });

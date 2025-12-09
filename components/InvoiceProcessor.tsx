@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
-import { UploadCloud, CheckCircle, AlertTriangle, FileText, ArrowRight, Save, Loader2, RefreshCw } from 'lucide-react';
-import { extractInvoiceData } from '../services/geminiService';
-import { ExtractedInvoice, AppStatus, ValidationStatus } from '../types';
+import { UploadCloud, CheckCircle, AlertTriangle, FileText, Loader2, Save } from 'lucide-react';
+import { extractInvoiceData } from '../services/geminiService.ts';
+import { ExtractedInvoice, AppStatus, ValidationStatus } from '../types.ts';
 
 // Mock PO Database for Reconciliation
 const MOCK_PO_DB: Record<string, { expectedAmount: number, status: string }> = {

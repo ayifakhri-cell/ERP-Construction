@@ -12,35 +12,27 @@
         background-color: #f8fafc;
       }
     </style>
-    <!-- Babel Standalone for in-browser transpilation -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!-- Polyfill for process.env.API_KEY -->
-    <script>
-      // This object mimics the Node.js process.env object in the browser
-      window.process = {
-        env: {
-          // This placeholder will be replaced by the Netlify build command defined in netlify.toml
-          // Do not change __API_KEY__ here manually.
-          API_KEY: "__API_KEY__"
-        }
-      };
-    </script>
-    <script type="importmap">
+    <!-- Import map for external dependencies if strictly needed, though Vite bundles them usually. 
+         Keeping consistent with current external CDN usage for Tailwind/Fonts, 
+         but React/Recharts will be handled by Vite bundling in a real setup. 
+         For this environment, we rely on npm/package.json resolution. -->
+  <script type="importmap">
 {
   "imports": {
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
     "react": "https://aistudiocdn.com/react@^19.2.1",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-    "recharts": "https://aistudiocdn.com/recharts@^3.5.1"
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://aistudiocdn.com/vite@^7.2.7"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
-    <!-- Load the main entry point with Babel -->
-    <script type="text/babel" data-type="module" data-presets="react,typescript" src="./index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

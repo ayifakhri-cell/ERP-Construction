@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MessageSquare, BookOpen, ChevronRight, User, Bot, AlertCircle, FileText } from 'lucide-react';
-import { queryProjectKnowledgeBase } from '../services/geminiService';
-import { ChatMessage } from '../types';
+import { queryProjectKnowledgeBase } from '../services/geminiService.ts';
+import { ChatMessage } from '../types.ts';
 
 const ProjectAssistant: React.FC = () => {
   const [query, setQuery] = useState('');

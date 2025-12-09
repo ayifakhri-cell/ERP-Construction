@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Send, Bot, User, Cpu, Tag, ShoppingCart, DollarSign } from 'lucide-react';
-import { createProcurementSession, mockMarketPriceTool } from '../services/geminiService';
-import { ChatMessage } from '../types';
-import { ExtractedInvoice } from '../types';
+import { createProcurementSession, mockMarketPriceTool } from '../services/geminiService.ts';
+import { ChatMessage, ExtractedInvoice } from '../types.ts';
 
 const ProcurementAgent: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([

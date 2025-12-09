@@ -1,4 +1,4 @@
-import { BIMElement } from './types';
+import { BIMElement } from './types.ts';
 
 // Models
 export const MODEL_FAST = 'gemini-2.5-flash';

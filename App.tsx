@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Layout from './components/Layout';
-import InvoiceProcessor from './components/InvoiceProcessor';
-import BIMViewer from './components/BIMViewer';
-import ProcurementAgent from './components/ProcurementAgent';
-import ProjectAssistant from './components/ProjectAssistant';
+import Layout from './components/Layout.tsx';
+import InvoiceProcessor from './components/InvoiceProcessor.tsx';
+import BIMViewer from './components/BIMViewer.tsx';
+import ProcurementAgent from './components/ProcurementAgent.tsx';
+import ProjectAssistant from './components/ProjectAssistant.tsx';
 import { TrendingUp, Users, AlertCircle } from 'lucide-react';
 
 const DashboardStub = () => (
