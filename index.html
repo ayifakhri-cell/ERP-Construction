@@ -12,7 +12,20 @@
         background-color: #f8fafc;
       }
     </style>
-  <script type="importmap">
+    <!-- Babel Standalone for in-browser transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Polyfill for process.env.API_KEY -->
+    <script>
+      // This object mimics the Node.js process.env object in the browser
+      window.process = {
+        env: {
+          // This placeholder will be replaced by the Netlify build command defined in netlify.toml
+          // Do not change __API_KEY__ here manually.
+          API_KEY: "__API_KEY__"
+        }
+      };
+    </script>
+    <script type="importmap">
 {
   "imports": {
     "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
@@ -27,5 +40,7 @@
 </head>
   <body>
     <div id="root"></div>
+    <!-- Load the main entry point with Babel -->
+    <script type="text/babel" data-type="module" data-presets="react,typescript" src="./index.tsx"></script>
   </body>
 </html>
